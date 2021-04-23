@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Http\Controllers\ApiController;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::prefix('/faraidh')->group(function(){
+    Route::get(NULL, [FaraidhController::class, 'index']);
+    Route::match(['get', 'post'], 'load/{param?}', [FaraidhController::class, 'load']);
 });
