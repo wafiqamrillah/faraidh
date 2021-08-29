@@ -17,12 +17,13 @@ mix.js("resources/js/app.js", "public/js")
         require('postcss-import'),
         require('tailwindcss'),
     ])
+    .sass('resources/sass/app.scss', 'public/css')
     .copy(
         'node_modules/@fortawesome/fontawesome-free/webfonts',
         'public/webfonts'
     );
 
-mix.browserSync('faraidh.test');
+mix.browserSync('faraidhapp.test');
 
 if (mix.inProduction()) {
     mix.version();

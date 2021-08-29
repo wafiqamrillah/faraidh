@@ -18,21 +18,21 @@
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endif
+    <body class="font-sans antialiased text-md md:text-md lg:text-md">
+        <div class="min-h-screen bg-gray-400">
+            <div class="fixed w-full top-0 z-30">
+                @livewire('layouts.navigation.top')
+            </div>
 
             <!-- Page Content -->
-            <main>
-                {{ $slot }}
+            <main class="pt-14 container mx-auto px-2 md:px-4 lg:px-8">
+                @livewire('layouts.page-content', ['content' => base64_encode($slot)])
+                {{-- {{$slot}} --}}
             </main>
+
+            <div class="fixed w-full bottom-0 z-30">
+                @livewire('layouts.navigation.bottom')
+            </div>
         </div>
 
         @stack('modals')

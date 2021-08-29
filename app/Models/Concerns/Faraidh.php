@@ -1,10 +1,13 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Concerns;
 
-class Faraidh
+use App\Models\Concerns\Features;
+
+trait Faraidh
 {
-	public static function process($data)
+    use Features;
+	protected function process($data)
 	{
 		//Mendapatkan siapa Ahli Warisnya
 			$data = $this->getAhliWaris($data);
@@ -32,7 +35,7 @@ class Faraidh
 		return $data;
 	}
 
-	public static function getAhliWaris($param = NULL, $searchBy = 'key')
+	protected function getAhliWaris($param = NULL, $searchBy = 'key')
 	{
 		$list = array(
 			(object)['key' => 'Anak Laki-Laki', 																											'value' => 'A'],
@@ -79,7 +82,7 @@ class Faraidh
 
 	}
 
-	public static function getAngkaWaris($param=NULL, $total=1)
+	protected function getAngkaWaris($param=NULL, $total=1)
 	{
 		$list = (object)[
 			'A' =>	(object)['waris' => 'A', 'satu' => '31', 'lebih' => '31'	, 'golongan' => 'ashobah', 'hak' => '',	],
@@ -125,7 +128,7 @@ class Faraidh
 
 	}
 
-	public static function getJadwalFaraidh($array=array())
+	protected function getJadwalFaraidh($array=array())
 	{
 		$list = (object)[
 			'1'  => (object)['angka_waris' => 1, 	'hasil_mentah' => array('A'			, ''		, 'Mj'	, 'Mj'	, 'Mj'	, 'Mj'	, 'Mj'	, 'A'		, 'A'		, 'A'			, 'A'		, 'A'		, 'A'			, 'A'			, 'A.M'		, 'A.M'	, 'Mj'	, 'Mj'		, 'A.M'		, 'A.M'	, 'Mj'	, 'Mj'		, 'Mj'	, 'A'		, 'Mj'		, 'A'		, 'A.j'		, 'A.j'		, 'A.j'		, 'A.j'		, 'Mj'	, 'Mj'	)],
@@ -194,7 +197,7 @@ class Faraidh
 
 	}
 
-	public static function getKelas($param=NULL)
+	protected function getKelas($param=NULL)
 	{
 		$list = (object)[
 			'2/3' 				=> '18',
@@ -242,7 +245,7 @@ class Faraidh
 
 	}
 
-	public static function getAsalMasalah($param=NULL)
+	protected function getAsalMasalah($param=NULL)
 	{
 		$base = array();
 		$kpt = array();
@@ -327,7 +330,7 @@ class Faraidh
 		return $param;
 	}
 
-	public static function getDalil($param=NULL)
+	protected function getDalil($param=NULL)
 	{
 		if($param != NULL){
 			if (is_array($param)) {

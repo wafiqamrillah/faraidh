@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Concerns;
 
-class Features
+trait Features
 {
-    public function RomanConversion($values)
+    protected function RomanConversion($values)
     {
         $romans = array('M' => 1000, 'CM' => 900, 'D' => 500, 'CD' => 400, 'C' => 100, 'XC'	=> 90, 'L' => 50, 'XL' => 40, 'X' => 10, 'IX' => 9, 'V' => 5, 'IV' => 4, 'I' => 1);
         if (is_numeric($values)) {
@@ -26,7 +26,7 @@ class Features
         return $result;
     }
 
-    public function lcm($array = array(), $count = NULL)
+    protected function lcm($array = array(), $count = NULL)
     {
         if (is_null($count)) {
             $count = count($array);

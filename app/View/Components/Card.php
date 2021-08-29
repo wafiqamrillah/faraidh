@@ -4,8 +4,18 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class AppLayout extends Component
+class Card extends Component
 {
+    /**
+     * Create a new component instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        //
+    }
+
     /**
      * Get the view / contents that represent the component.
      *
@@ -13,6 +23,6 @@ class AppLayout extends Component
      */
     public function render()
     {
-        return view('layouts.app');
+        return view('components.card');
     }
 }

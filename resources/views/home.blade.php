@@ -1,1 +1,3 @@
-<x-app-layout></x-app-layout>
+<x-app-layout>
+    @livewire('faraidh.hitung-waris')
+</x-app-layout>
