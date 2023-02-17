@@ -1,5 +1,3 @@
-<div class="bg-white border border-gray-200 shadow-lg rounded-lg">
-    <div class="px-2 py-2">
-        {{$slot}}
-    </div>
+<div {{ $attributes->merge(['class' => 'w-full bg-white border border-gray-200 rounded-lg shadow-md', 'style' => 'min-height: 2rem']) }}>
+    {{$slot}}
 </div>

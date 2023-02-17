@@ -6,7 +6,14 @@ use Livewire\Component;
 
 class PageContent extends Component
 {
+    public $readyToLoad = FALSE;
+
     public $content;
+
+    public function loadPage()
+    {
+        $this->readyToLoad = TRUE;
+    }
 
     public function render()
     {

@@ -38,29 +38,98 @@ trait Faraidh
 	protected function getAhliWaris($param = NULL, $searchBy = 'key')
 	{
 		$list = array(
-			(object)['key' => 'Anak Laki-Laki', 																											'value' => 'A'],
-			(object)['key' => 'Cucu Laki-Laki (Anak dari Anak Laki-Laki)', 														'value' => 'B'],
-			(object)['key' => 'Ayah', 																																'value' => 'C'],
-			(object)['key' => 'Saudara Laki-Laki Seibu Seayah', 																			'value' => 'D'],
-			(object)['key' => 'Saudara Laki-Laki Seayah', 																						'value' => 'E'],
-			(object)['key' => 'Kakek (Ayah dari Ayah)', 																							'value' => 'F'],
-			(object)['key' => 'Keponakan Laki-Laki (Anak dari Saudara Laki-Laki Seibu Seayah)', 			'value' => 'G'],
-			(object)['key' => 'Keponakan Laki-Laki (Anak dari Saudara Laki-Laki Seayah)', 						'value' => 'H'],
-			(object)['key' => 'Paman Seibu Seayah (Saudara dari Ayah)', 															'value' => 'J'],
-			(object)['key' => 'Paman Seayah (Saudara dari Ayah)', 																		'value' => 'K'],
-			(object)['key' => 'Saudara Laki-Laki Sepupu Seibu Seayah (Anak dari Paman Seibu Seayah)', 'value' => 'L'],
-			(object)['key' => 'Saudara Laki-Laki Sepupu Seayah (Anak dari Paman Seayah)', 						'value' => 'M'],
-			(object)['key' => 'Suami', 																																'value' => 'N'],
-			(object)['key' => 'Saudara Laki-Laki Seibu (Anak dari Ibu)', 															'value' => 'O'],
-			(object)['key' => 'Istri', 																																'value' => 'P'],
-			(object)['key' => 'Anak Perempuan', 																											'value' => 'Q'],
-			(object)['key' => 'Cucu Perempuan (Anak dari Anak Laki-Laki)', 														'value' => 'R'],
-			(object)['key' => 'Ibu', 																																	'value' => 'S'],
-			(object)['key' => 'Nenek dari Ayah', 																											'value' => 'T'],
-			(object)['key' => 'Nenek dari Ibu', 																											'value' => 'U'],
-			(object)['key' => 'Saudara Perempuan Seibu Seayah', 																			'value' => 'V'],
-			(object)['key' => 'Saudara Perempuan Seayah', 																						'value' => 'W'],
-			(object)['key' => 'Saudara Perempuan Seibu', 																							'value' => 'X'],
+			(object)[
+				'key' => 'Anak Laki-Laki',
+				'value' => 'A'
+			],
+			(object)[
+				'key' => 'Cucu Laki-Laki (Anak dari Anak Laki-Laki)',
+				'value' => 'B'
+			],
+			(object)[
+				'key' => 'Ayah',
+				'value' => 'C'
+			],
+			(object)[
+				'key' => 'Saudara Laki-Laki Seibu Seayah', 
+				'value' => 'D'
+			],
+			(object)[
+				'key' => 'Saudara Laki-Laki Seayah',
+				'value' => 'E'
+			],
+			(object)[
+				'key' => 'Kakek (Ayah dari Ayah)',
+				'value' => 'F'
+			],
+			(object)[
+				'key' => 'Keponakan Laki-Laki (Anak dari Saudara Laki-Laki Seibu Seayah)',
+				'value' => 'G'
+			],
+			(object)[
+				'key' => 'Keponakan Laki-Laki (Anak dari Saudara Laki-Laki Seayah)',
+				'value' => 'H'
+			],
+			(object)[
+				'key' => 'Paman Seibu Seayah (Saudara dari Ayah)',
+				'value' => 'J'
+			],
+			(object)[
+				'key' => 'Paman Seayah (Saudara dari Ayah)',
+				'value' => 'K'
+			],
+			(object)[
+				'key' => 'Saudara Laki-Laki Sepupu Seibu Seayah (Anak dari Paman Seibu Seayah)',
+				'value' => 'L'
+			],
+			(object)[
+				'key' => 'Saudara Laki-Laki Sepupu Seayah (Anak dari Paman Seayah)',
+				'value' => 'M'
+			],
+			(object)[
+				'key' => 'Suami',
+				'value' => 'N'
+			],
+			(object)[
+				'key' => 'Saudara Laki-Laki Seibu (Anak dari Ibu)',
+				'value' => 'O'
+			],
+			(object)[
+				'key' => 'Istri',
+				'value' => 'P'
+			],
+			(object)[
+				'key' => 'Anak Perempuan',
+				'value' => 'Q'
+			],
+			(object)[
+				'key' => 'Cucu Perempuan (Anak dari Anak Laki-Laki)', 
+				'value' => 'R'
+			],
+			(object)[
+				'key' => 'Ibu',
+				'value' => 'S'
+			],
+			(object)[
+				'key' => 'Nenek dari Ayah',
+				'value' => 'T'
+			],
+			(object)[
+				'key' => 'Nenek dari Ibu',
+				'value' => 'U'
+			],
+			(object)[
+				'key' => 'Saudara Perempuan Seibu Seayah',
+				'value' => 'V'
+			],
+			(object)[
+				'key' => 'Saudara Perempuan Seayah',
+				'value' => 'W'
+			],
+			(object)[
+				'key' => 'Saudara Perempuan Seibu',
+				'value' => 'X'
+			],
 		);
 		if ($param != NULL) {
 			$search		= $searchBy;
@@ -85,29 +154,190 @@ trait Faraidh
 	protected function getAngkaWaris($param=NULL, $total=1)
 	{
 		$list = (object)[
-			'A' =>	(object)['waris' => 'A', 'satu' => '31', 'lebih' => '31'	, 'golongan' => 'ashobah', 'hak' => '',	],
-			'B' =>	(object)['waris' => 'B', 'satu' => '30', 'lebih' => '30'	, 'golongan' => 'ashobah', 'hak' => '',	],
-			'C' =>	(object)['waris' => 'C', 'satu' => '24', 'lebih' => ''		, 'golongan' => 'ashobah', 'hak' => 'dzawil furudh',	],
-			'D' =>	(object)['waris' => 'D', 'satu' => '20', 'lebih' => '21'	, 'golongan' => 'ashobah', 'hak' => '',	],
-			'E' =>	(object)['waris' => 'E', 'satu' => '16', 'lebih' => '17'	, 'golongan' => 'ashobah', 'hak' => '',	],
-			'F' =>	(object)['waris' => 'F', 'satu' => '22', 'lebih' => ''		, 'golongan' => 'ashobah', 'hak' => 'dzawil furudh',	],
-			'G' =>	(object)['waris' => 'G', 'satu' => '6', 'lebih' => '6'		, 'golongan' => 'ashobah', 'hak' => '',	],
-			'H' =>	(object)['waris' => 'H', 'satu' => '5', 'lebih' => '5'		, 'golongan' => 'ashobah', 'hak' => '',	],
-			'J' =>	(object)['waris' => 'J', 'satu' => '4', 'lebih' => '4'		, 'golongan' => 'ashobah', 'hak' => '',	],
-			'K' =>	(object)['waris' => 'K', 'satu' => '3', 'lebih' => '3'		, 'golongan' => 'ashobah', 'hak' => '',	],
-			'L' =>	(object)['waris' => 'L', 'satu' => '2', 'lebih' => '2'		, 'golongan' => 'ashobah', 'hak' => '',	],
-			'M' =>	(object)['waris' => 'M', 'satu' => '1', 'lebih' => '1'		, 'golongan' => 'ashobah', 'hak' => '',	],
-			'N' =>	(object)['waris' => 'N', 'satu' => '25', 'lebih' => ''		, 'golongan' => 'dzawil furudh', 'hak' => array("ashobah ma'al ghoir", "ashobah bil ghoir"),	],
-			'O' =>	(object)['waris' => 'O', 'satu' => '11', 'lebih' => '13'	, 'golongan' => 'dzawil furudh', 'hak' => array("ashobah ma'al ghoir", "ashobah bil ghoir"),	],
-			'P' =>	(object)['waris' => 'P', 'satu' => '23', 'lebih' => '23'	, 'golongan' => 'dzawil furudh', 'hak' => array("ashobah ma'al ghoir", "ashobah bil ghoir"),	],
-			'Q' =>	(object)['waris' => 'Q', 'satu' => '28', 'lebih' => '29'	, 'golongan' => 'dzawil furudh', 'hak' => '',	],
-			'R' =>	(object)['waris' => 'R', 'satu' => '26', 'lebih' => '27'	, 'golongan' => 'dzawil furudh', 'hak' => '',	],
-			'S' =>	(object)['waris' => 'S', 'satu' => '9', 'lebih' => ''		, 'golongan' => 'dzawil furudh', 'hak' => array("ashobah ma'al ghoir", "ashobah bil ghoir"),	],
-			'T' =>	(object)['waris' => 'T', 'satu' => '7', 'lebih' => ''		, 'golongan' => 'dzawil furudh', 'hak' => array("ashobah ma'al ghoir", "ashobah bil ghoir"),	],
-			'U' =>	(object)['waris' => 'U', 'satu' => '8', 'lebih' => ''		, 'golongan' => 'dzawil furudh', 'hak' => array("ashobah ma'al ghoir", "ashobah bil ghoir"),	],
-			'V' =>	(object)['waris' => 'V', 'satu' => '19', 'lebih' => '18'		, 'golongan' => 'dzawil furudh', 'hak' => '',	],
-			'W' =>	(object)['waris' => 'W', 'satu' => '15', 'lebih' => '14'		, 'golongan' => 'dzawil furudh', 'hak' => '',	],
-			'X' =>	(object)['waris' => 'X', 'satu' => '10', 'lebih' => '12'	, 'golongan' => 'dzawil furudh', 'hak' => array("ashobah ma'al ghoir", "ashobah bil ghoir"),	],
+			'A' =>
+				(object)[
+					'waris' => 'A',
+					'satu' => '31',
+					'lebih' => '31'	,
+					'golongan' => 'ashobah',
+					'hak' => '',
+				],
+			'B' =>
+				(object)[
+					'waris' => 'B',
+					'satu' => '30',
+					'lebih' => '30'	,
+					'golongan' => 'ashobah',
+					'hak' => '',
+				],
+			'C' =>
+				(object)[
+					'waris' => 'C',
+					'satu' => '24',
+					'lebih' => ''		,
+					'golongan' => 'ashobah',
+					'hak' => 'dzawil furudh',
+				],
+			'D' =>
+				(object)[
+					'waris' => 'D',
+					'satu' => '20',
+					'lebih' => '21'	,
+					'golongan' => 'ashobah',
+					'hak' => '',
+				],
+			'E' =>	
+				(object)[
+					'waris' => 'E',
+					'satu' => '16',
+					'lebih' => '17'	,
+					'golongan' => 'ashobah',
+					'hak' => '',
+				],
+			'F' =>
+				(object)[
+					'waris' => 'F',
+					'satu' => '22',
+					'lebih' => ''		,
+					'golongan' => 'ashobah',
+					'hak' => 'dzawil furudh',
+				],
+			'G' =>
+				(object)[
+					'waris' => 'G',
+					'satu' => '6',
+					'lebih' => '6'		,
+					'golongan' => 'ashobah',
+					'hak' => '',
+				],
+			'H' =>	
+				(object)[
+					'waris' => 'H',
+					'satu' => '5',
+					'lebih' => '5'		,
+					'golongan' => 'ashobah',
+					'hak' => '',
+				],
+			'J' =>
+				(object)[
+					'waris' => 'J',
+					'satu' => '4',
+					'lebih' => '4'		,
+					'golongan' => 'ashobah',
+					'hak' => '',
+				],
+			'K' =>
+				(object)[
+					'waris' => 'K',
+					'satu' => '3',
+					'lebih' => '3'		,
+					'golongan' => 'ashobah',
+					'hak' => '',
+				],
+			'L' =>
+				(object)[
+					'waris' => 'L',
+					'satu' => '2',
+					'lebih' => '2'		,
+					'golongan' => 'ashobah',
+					'hak' => '',
+				],
+			'M' =>
+				(object)[
+					'waris' => 'M',
+					'satu' => '1',
+					'lebih' => '1'		,
+					'golongan' => 'ashobah',
+					'hak' => '',
+				],
+			'N' =>
+				(object)[
+					'waris' => 'N',
+					'satu' => '25',
+					'lebih' => ''		,
+					'golongan' => 'dzawil furudh',
+					'hak' => array("ashobah ma'al ghoir", "ashobah bil ghoir"),
+				],
+			'O' =>
+				(object)[
+					'waris' => 'O',
+					'satu' => '11',
+					'lebih' => '13'	,
+					'golongan' => 'dzawil furudh',
+					'hak' => array("ashobah ma'al ghoir", "ashobah bil ghoir"),
+				],
+			'P' =>
+				(object)[
+					'waris' => 'P',
+					'satu' => '23',
+					'lebih' => '23'	,
+					'golongan' => 'dzawil furudh',
+					'hak' => array("ashobah ma'al ghoir", "ashobah bil ghoir"),
+				],
+			'Q' =>
+				(object)[
+					'waris' => 'Q',
+					'satu' => '28',
+					'lebih' => '29'	,
+					'golongan' => 'dzawil furudh',
+					'hak' => '',
+				],
+			'R' =>
+				(object)[
+					'waris' => 'R',
+					'satu' => '26',
+					'lebih' => '27'	,
+					'golongan' => 'dzawil furudh',
+					'hak' => '',
+				],
+			'S' =>
+				(object)[
+					'waris' => 'S',
+					'satu' => '9',
+					'lebih' => ''		,
+					'golongan' => 'dzawil furudh',
+					'hak' => array("ashobah ma'al ghoir", "ashobah bil ghoir"),
+				],
+			'T' =>
+				(object)[
+					'waris' => 'T',
+					'satu' => '7',
+					'lebih' => ''		,
+					'golongan' => 'dzawil furudh',
+					'hak' => array("ashobah ma'al ghoir", "ashobah bil ghoir"),
+				],
+			'U' =>
+				(object)[
+					'waris' => 'U',
+					'satu' => '8',
+					'lebih' => ''		,
+					'golongan' => 'dzawil furudh',
+					'hak' => array("ashobah ma'al ghoir", "ashobah bil ghoir"),
+				],
+			'V' =>
+				(object)[
+					'waris' => 'V',
+					'satu' => '19',
+					'lebih' => '18'		,
+					'golongan' => 'dzawil furudh',
+					'hak' => '',
+				],
+			'W' =>
+				(object)[
+					'waris' => 'W',
+					'satu' => '15',
+					'lebih' => '14'		,
+					'golongan' => 'dzawil furudh',
+					'hak' => '',
+				],
+			'X' =>
+				(object)[
+					'waris' => 'X',
+					'satu' => '10',
+					'lebih' => '12'	,
+					'golongan' => 'dzawil furudh',
+					'hak' => array("ashobah ma'al ghoir", "ashobah bil ghoir"),
+				],
 		];
 		if ($param != NULL) {
 			if(is_array($param)){
@@ -256,7 +486,7 @@ trait Faraidh
 				if (is_numeric(substr($base[$i][1], 0, 1))) {
 					$kpt[] = substr($base[$i][1], 0, 1);
 				} else {
-					$base[$i][1] = Features::RomanConversion($base[$i][1]);
+					$base[$i][1] = $this->RomanConversion($base[$i][1]);
 					$kpt[] = $base[$i][1];
 				}
 			} else {
@@ -264,7 +494,7 @@ trait Faraidh
 			}
 			$i++;
 		}
-		$kpt = Features::lcm($kpt);
+		$kpt = $this->lcm($kpt);
 		$sisa_bagian = $kpt;
 		$total = array();
 		for ($i=0; $i < count($base) ; $i++) {
@@ -323,7 +553,7 @@ trait Faraidh
 						$value->bagian = '';
 					}
 				}else{
-					$value->bagian = $value->bagian*$max;
+					$value->bagian = $value->bagian != '-' ? $value->bagian*$max : $value->bagian;
 				}
 			}
 		}

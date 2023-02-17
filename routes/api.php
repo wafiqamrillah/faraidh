@@ -19,4 +19,5 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('/faraidh')->group(function(){
     Route::get(NULL, [FaraidhController::class, 'index']);
     Route::match(['get', 'post'], 'load/{param?}', [FaraidhController::class, 'load']);
+    Route::match(['get'], 'get', [FaraidhController::class, 'get']);
 });

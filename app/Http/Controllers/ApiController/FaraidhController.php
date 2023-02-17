@@ -4,15 +4,16 @@ namespace App\Http\Controllers\ApiController;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
-// Traits
-
+use App\Models\Concerns\Faraidh;
 
 class FaraidhController extends Controller
 {
+    use Faraidh;
+
     public function index()
     {
-        return "testing";
+		return redirect('/');
+        // return view('api.index');
     }
 
     public function load(Request $request, $param = NULL)
@@ -20,9 +21,9 @@ class FaraidhController extends Controller
 		$output = array();
 		if ($param == 'dalil') {
 			$nomor_dalil = json_decode($request->nomor_dalil);
-			$output = array('result' => Faraidh::getDalil($nomor_dalil));
+			$output = array('result' => $this->getDalil($nomor_dalil));
 		}else{
-			$output = array('list' => Faraidh::getAhliWaris());
+			$output = array('list' => $this->getAhliWaris());
 		}
 		return json_encode($output);
     }
@@ -31,7 +32,7 @@ class FaraidhController extends Controller
 	{
 		$datas 	= $request->result;
 		$datas 	= json_decode($datas);
-		$result = Faraidh::process($datas);
+		$result = $this->process($datas);
 		$output = array(
 			'result' 		=> $result,
 			'explanation' 	=> $datas,

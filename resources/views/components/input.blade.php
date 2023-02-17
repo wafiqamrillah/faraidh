@@ -1,0 +1,2 @@
+@props(['disabled' => false, 'required' => false, 'readonly' => false])
+<input {{ $disabled ? 'disabled' : '' }} {{ $required ? 'required' : '' }} {{ $readonly ? 'readonly' : '' }} {!! $attributes->merge(['class' => 'w-full px-3 py-2 block bg-white disabled:bg-gray-100 focus:bg-white border border-blue-700 disabled:border-gray-400 focus:border-blue-700 rounded-md focus:outline-none focus:ring focus:ring-blue-700 focus:ring-opacity-25 disabled:cursor-not-allowed transition duration-150 ease-in-out']) !!}>

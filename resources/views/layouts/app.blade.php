@@ -18,25 +18,26 @@
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
-    <body class="font-sans antialiased text-md md:text-md lg:text-md">
-        <div class="min-h-screen bg-gray-400">
-            <div class="fixed w-full top-0 z-30">
-                @livewire('layouts.navigation.top')
-            </div>
+    <body class="bg-gray-300 font-sans antialiased">
+        <div class="fixed w-full top-0 z-30">
+            @livewire('layouts.navigation.top')
+        </div>
 
-            <!-- Page Content -->
-            <main class="pt-14 container mx-auto px-2 md:px-4 lg:px-8">
-                @livewire('layouts.page-content', ['content' => base64_encode($slot)])
-                {{-- {{$slot}} --}}
-            </main>
+        <!-- Page Content -->
+        <main class="container mx-auto mt-14 mb-16 px-2 md:px-4 lg:px-8">
+            @livewire('layouts.page-content', ['content' => base64_encode($slot)])
+            {{-- {{$slot}} --}}
+        </main>
 
-            <div class="fixed w-full bottom-0 z-30">
-                @livewire('layouts.navigation.bottom')
-            </div>
+        <div class="fixed w-full bottom-0 z-30">
+            @livewire('layouts.navigation.bottom')
         </div>
 
         @stack('modals')
 
+        @livewire('layouts.modal')
+
         @livewireScripts
+        <x-livewire-alert::scripts/>
     </body>
 </html>
