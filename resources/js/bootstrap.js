@@ -14,8 +14,23 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
  * Alpine JS
  */
  import Alpine from 'alpinejs';
+ import intersect from '@alpinejs/intersect';
+ Alpine.plugin(intersect);
  window.Alpine = Alpine;
  Alpine.start();
+
+
+/**
+ * Inputmask
+ */
+ import Inputmask from 'inputmask';
+ window.Inputmask = Inputmask
+ 
+/**
+ * Sweetalert
+ */
+ import Swal from 'sweetalert2';
+ window.Swal = Swal
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening

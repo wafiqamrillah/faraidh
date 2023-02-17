@@ -1,3 +1,18 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+@layer components {
+    table.table > thead > tr > th, table.table > tfoot > tr > th {
+        @apply sticky h-8 border first:border-l-0 last:border-r-0 border-gray-400 truncate z-10 bg-gray-100 px-2 text-xs leading-4 font-bold uppercase tracking-wider text-center;
+    }
+    table.table > thead > tr > th {
+        @apply border-t-0 top-0;
+    }
+    table.table > tfoot > tr > th {
+        @apply border-b-0 bottom-0;
+    }
+    table.table > tbody > tr > td {
+        @apply py-3 px-2 border first:border-l-0 last:border-r-0 border-gray-400;
+    }
+}
